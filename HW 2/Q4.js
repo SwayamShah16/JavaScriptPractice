@@ -14,5 +14,13 @@ function info(status){
 }
 
 async function test() {
-    
+     try {
+        const data = await info()
+        if (data) {
+          console.log(data);
+        }
+    } catch (error) {
+        console.log(error);
+    }
 }
+test();
