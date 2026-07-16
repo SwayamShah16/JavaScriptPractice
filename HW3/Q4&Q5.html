@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Product Name:
+    <input type="text" id="name">
+    Price:
+    <input type="text" id="price">
+    Quantity:
+    <input type="text" id="quan">
+    Customer:
+    <input type="text" id="cust">
+    Address:
+    <input type="text" id="add">
+    <button id="b1">Submit</button>
+    <script>
+        const b1 = document.getElementById("b1")
+        b1.addEventListener("click",()=>{
+            const name = document.getElementById("name").value
+            const price = document.getElementById("price").value
+            const priceReg = /^[1-9]$/
+            const quan = document.getElementById("quan").value
+            const cust = document.getElementById("cust").value
+            const custReg = /^[A-Za-z]$/
+            const add = document.getElementById("add").value
+            if (name.length < 0 ) {
+                alert("Product Name should not be empty")
+            } 
+            else if(!priceReg.test(price)){
+                alert("Price is not Valid")
+            }
+            else if(quan < 0){
+                alert("Invalid Quantity")
+            }
+            else if(add < 10){
+                alert("Enter Valid Address")
+            }
+            else if(!custReg.test(cust)){
+                alert("Enter a Valid Customer Name")
+            }
+            else {
+                alert("Valid")
+            }
+        })
+    </script>
+</body>
+</html>

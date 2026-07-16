@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Count : <span id = "span">0</span></p>
+
+    <button onclick="inc()">Increment</button>
+    <button onclick="dec()">Decrement</button>
+    <button onclick="res()">Reset</button>
+
+    <script>
+        let count = 0;
+
+        function inc() {
+            count++;
+            document.getElementById("span").textContent = count
+        }
+        function dec() {
+            count --;
+            if (count < 0) {
+                alert("Count is less than o")
+            }
+            document.getElementById("span").textContent = count
+        }
+        function res() {
+            count = 0;
+            document.getElementById("span").textContent = count
+        }
+    </script>
+</body>
+</html>
